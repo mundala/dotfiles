@@ -1,0 +1,67 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = 320
+    height = 100
+    origin = top-right
+    offset = 12x48
+    scale = 0
+    notification_limit = 5
+
+    # Glassmorphism
+    transparency = 20
+    padding = 12
+    horizontal_padding = 14
+    text_icon_padding = 10
+    frame_width = 1
+    gap_size = 6
+    separator_height = 1
+    separator_color = rgba(255,255,255,0.1)
+
+    corner_radius = 12
+
+    font = JetBrainsMono Nerd Font 11
+    line_height = 4
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    # Icons
+    enable_recursive_icon_lookup = true
+    icon_theme = Papirus-Dark
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 48
+
+    # Mouse
+    mouse_left_click = close_current
+    mouse_right_click = do_action, close_current
+
+[urgency_low]
+    background = "rgba(30,30,46,0.80)"
+    foreground = "#cdd6f4"
+    frame_color = "rgba(137,180,250,0.3)"
+    timeout = 4
+    icon = dialog-information
+
+[urgency_normal]
+    background = "rgba(30,30,46,0.85)"
+    foreground = "#cdd6f4"
+    frame_color = "rgba(203,166,247,0.35)"
+    timeout = 6
+    icon = dialog-information
+
+[urgency_critical]
+    background = "rgba(30,30,46,0.90)"
+    foreground = "#f38ba8"
+    frame_color = "rgba(243,139,168,0.5)"
+    timeout = 0
+    icon = dialog-error

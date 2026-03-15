@@ -1,0 +1,95 @@
+/* Rofi — Glassmorphism launcher */
+
+configuration {
+    modi: "drun,run,window,filebrowser";
+    show-icons: true;
+    display-drun: "  Apps";
+    display-run: "  Run";
+    display-window: "  Windows";
+    display-filebrowser: "  Files";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 12";
+    icon-theme: "Papirus-Dark";
+}
+
+* {
+    bg: rgba(30, 30, 46, 0.85);
+    bg-alt: rgba(49, 50, 68, 0.7);
+    bg-selected: rgba(203, 166, 247, 0.2);
+    fg: #cdd6f4;
+    fg-alt: #6c7086;
+    accent: #cba6f7;
+    border-col: rgba(203, 166, 247, 0.3);
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    background-color: @bg;
+    border: 1px solid;
+    border-color: @border-col;
+    border-radius: 16px;
+    width: 480px;
+    padding: 12px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+    spacing: 8px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 10px;
+    padding: 10px 14px;
+    children: [prompt, entry];
+    spacing: 8px;
+}
+
+prompt {
+    color: @accent;
+    font: "JetBrainsMono Nerd Font Bold 13";
+}
+
+entry {
+    color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    scrollbar: false;
+    spacing: 4px;
+}
+
+element {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 8px 12px;
+    spacing: 10px;
+    children: [element-icon, element-text];
+}
+
+element.selected {
+    background-color: @bg-selected;
+    border: 1px solid;
+    border-color: @border-col;
+}
+
+element-icon {
+    size: 24px;
+}
+
+element-text {
+    color: @fg;
+    vertical-align: 0.5;
+}
+
+element.selected element-text {
+    color: @accent;
+}
