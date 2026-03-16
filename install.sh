@@ -11,8 +11,8 @@ echo "🔮 Installing Glassmorphism Rice..."
 # 1. Install dependencies
 echo "📦 Installing packages..."
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm \
-    hyprland waybar kitty rofi-wayland dunst \
+sudo pacman -S --noconfirm --needed \
+    hyprland waybar kitty rofi rofi-wayland dunst \
     swww grim slurp wl-clipboard cliphist \
     thunar brightnessctl pavucontrol \
     nwg-look qt5ct papirus-icon-theme \
@@ -27,8 +27,7 @@ yay -S --noconfirm \
     catppuccin-gtk-theme-mocha \
     catppuccin-cursors-mocha \
     hyprlock hypridle \
-    rofi-power-menu \
-    waybar-git
+    rofi-power-menu
 
 # 2. Create config dirs
 echo "📁 Creating config directories..."
