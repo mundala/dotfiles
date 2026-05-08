@@ -19,7 +19,8 @@ sudo pacman -S --noconfirm --needed \
     ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji \
     pipewire pipewire-pulse wireplumber \
     networkmanager network-manager-applet \
-    polkit-gnome xdg-desktop-portal-hyprland
+    polkit-gnome xdg-desktop-portal-hyprland \
+    obsidian
 
 # AUR packages
 echo "📦 Installing AUR packages..."
@@ -58,6 +59,12 @@ curl -sL "https://raw.githubusercontent.com/catppuccin/wallpapers/main/minimalis
 
 # Symlink wallpaper to hypr config dir
 ln -sf ~/Pictures/wallpapers/wallpaper.jpg ~/.config/hypr/wallpaper.jpg
+
+# 4b. Obsidian vault (KingJean)
+echo "📓 Setting up Obsidian vault..."
+VAULT_DIR="$HOME/Documents/Obsidian/KingJean"
+mkdir -p "$VAULT_DIR"/{0-Inbox/Daily,1-Projects,2-Areas,3-Resources,4-Archive,Templates,Attachments,.obsidian}
+cp -rn "$DOTFILES_DIR/obsidian/.obsidian/." "$VAULT_DIR/.obsidian/"
 
 # 5. Enable services
 echo "⚙️  Enabling services..."

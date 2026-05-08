@@ -1,0 +1,10 @@
+{
+  "useTab": false,
+  "tabSize": 2,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "0-Inbox",
+  "attachmentFolderPath": "Attachments",
+  "showLineNumber": true,
+  "showFrontmatter": true
+}
