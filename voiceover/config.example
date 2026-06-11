@@ -1,0 +1,8 @@
+# voiceover config — copy to ~/.config/voiceover/config and edit.
+#   mkdir -p ~/.config/voiceover && cp config.example ~/.config/voiceover/config
+
+# Reference clip to clone (clean 5–15s mono .wav)
+VOICE_SAMPLE="$HOME/voices/me.wav"
+
+# Exact transcript of the clip above — improves clone fidelity
+VOICE_SAMPLE_TEXT="The exact words spoken in the reference clip."
