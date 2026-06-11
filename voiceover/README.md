@@ -58,6 +58,28 @@ VOICE_SAMPLE_TEXT="The exact words spoken in me.wav."
 
 Then just: `voiceover --from-file script.txt --out vo.wav`
 
+## Game assets (batch mode)
+
+Render lots of dialogue lines from a CSV manifest into per-character folders
+(Godot-friendly, optional `.ogg`). See `voices/README.md` for the voice layout.
+
+```bash
+ln -sf ~/dotfiles/voiceover/voiceover-batch.sh ~/.local/bin/voiceover-batch
+
+# 1. Drop reference clips in ~/.config/voiceover/voices/ (e.g. guard.wav + guard.txt)
+# 2. Write a manifest (see manifest.example.csv): character,filename,text,emotion
+# 3. Generate:
+voiceover-batch manifest.example.csv --out-dir game_audio --ogg
+
+# Preview first without synthesizing:
+voiceover-batch manifest.example.csv --dry-run
+```
+
+Output: `game_audio/<character>/<filename>.wav` (+ `.ogg`). Per-line `emotion`
+selects a `<character>.<emotion>.wav` variant if present. Note: dots.tts is for
+**pre-baked** assets, not real-time in-game synthesis, and is weak at
+non-verbal sounds (grunts/screams) — use recorded SFX for those.
+
 ## Quality tips
 
 - **`--voice-text`** matters most — give the real transcript of your sample.

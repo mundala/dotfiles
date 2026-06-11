@@ -1,0 +1,9 @@
+character,filename,text,emotion
+guard,greet_01,"Halt! Who goes there?",angry
+guard,greet_02,"State your business, stranger.",neutral
+guard,idle_01,"Another quiet night on the wall...",neutral
+guard,alert_01,"Intruder! Sound the alarm!",angry
+npc_merchant,welcome_01,"Welcome, traveler! Take a look at my wares.",
+npc_merchant,thanks_01,"A pleasure doing business with you.",
+npc_merchant,broke_01,"Come back when you've got the coin.",
+narrator,intro_01,"In a land long forgotten, a hero rises.",
